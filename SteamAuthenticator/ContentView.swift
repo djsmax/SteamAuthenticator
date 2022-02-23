@@ -12,25 +12,42 @@ struct SteamUserRow: View {
     var user: SteamUser
     
     var body: some View {
-        Text("\(user.accountName)")
+        Text(user.accountName)
     }
 }
 
+
 struct ContentView: View {
-    @State private var authCodeText = "some auth code"
-    let accounts = [
-        SteamUser(accountName: "mySteamAccount", sharedSecret: "lel"),
-        SteamUser(accountName: "secondSteamAccount", sharedSecret: "lel"),
-        SteamUser(accountName: "actualSteamAccount", sharedSecret: "lel"),
-        
-    ]
+    @ObservedObject var helper = Helper()
+    let accountStorage = AccountStorage()
+    var accounts: [SteamUser] = []
+    
+    
+    init() {
+        self.accounts = accountStorage.getSavedAccounts()
+        if (self.accounts.count > 1) {
+            helper.setAccount(account: self.accounts[0])
+        } else {
+            helper.displayNoAccounts()
+        }
+
+    }
+
     
     
     var body: some View {
         VStack {
-            TextField("lol",text: $authCodeText)
-            List(accounts) { steamUser in
-                SteamUserRow(user: steamUser)
+            Text(helper.accountNameField).frame(maxWidth: .infinity, alignment: .leading).padding(4)
+            TextField("",text: $helper.codeField).font(.title)
+            Spacer()
+            List (accounts) { steamUser in
+              Button (action: {
+                  helper.setAccount(account: steamUser)
+                  helper.updateCode()
+              }) {
+                //How the cell should look
+                      SteamUserRow(user: steamUser)
+              }
             }
         }
     }
