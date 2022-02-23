@@ -9,6 +9,10 @@ import SwiftUI
 
 @main
 struct SteamAuthenticatorApp: App {
+    init() {
+        generateGuardCode(sharedSecret: "something")
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

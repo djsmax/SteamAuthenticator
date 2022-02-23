@@ -7,15 +7,37 @@
 
 import SwiftUI
 
-struct ContentView: View {
+
+struct SteamUserRow: View {
+    var user: SteamUser
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Text("\(user.accountName)")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+struct ContentView: View {
+    @State private var authCodeText = "some auth code"
+    let accounts = [
+        SteamUser(accountName: "mySteamAccount", sharedSecret: "lel"),
+        SteamUser(accountName: "secondSteamAccount", sharedSecret: "lel"),
+        SteamUser(accountName: "actualSteamAccount", sharedSecret: "lel"),
+        
+    ]
+    
+    
+    var body: some View {
+        VStack {
+            TextField("lol",text: $authCodeText)
+            List(accounts) { steamUser in
+                SteamUserRow(user: steamUser)
+            }
+        }
+    }
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
     }
 }
