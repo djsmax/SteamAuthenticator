@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SteamUser: Identifiable {
+class SteamUser: Identifiable, Codable {
     var accountName: String
     var sharedSecret: String
     
