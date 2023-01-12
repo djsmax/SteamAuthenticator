@@ -12,7 +12,13 @@ struct SteamAuthenticatorApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().onAppear {
+                DispatchQueue.main.async {
+                    NSApplication.shared.windows.forEach { window in
+                        window.standardWindowButton(.zoomButton)?.isEnabled = false
+                    }
+                }
+            }
         }
     }
 }

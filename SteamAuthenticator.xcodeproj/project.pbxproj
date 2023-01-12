@@ -13,6 +13,7 @@
 		5024F8AC27C0FA3A00E7CF39 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5024F8AB27C0FA3A00E7CF39 /* Preview Assets.xcassets */; };
 		5024F8B627C0FB7F00E7CF39 /* SteamUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5024F8B527C0FB7F00E7CF39 /* SteamUser.swift */; };
 		5024F8B827C0FD7900E7CF39 /* GenLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5024F8B727C0FD7900E7CF39 /* GenLogic.swift */; };
+		50435008297091A8002A4923 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50435007297091A8002A4923 /* Info.plist */; };
 		50510A4427C621DF00239679 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50510A4327C621DF00239679 /* Extensions.swift */; };
 		50AAA97027D4902700037F34 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AAA96F27D4902700037F34 /* FileReader.swift */; };
 		50D2547427C6398000E8E68A /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D2547327C6398000E8E68A /* Helper.swift */; };
@@ -28,9 +29,9 @@
 		5024F8AD27C0FA3A00E7CF39 /* SteamAuthenticator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SteamAuthenticator.entitlements; sourceTree = "<group>"; };
 		5024F8B527C0FB7F00E7CF39 /* SteamUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteamUser.swift; sourceTree = "<group>"; };
 		5024F8B727C0FD7900E7CF39 /* GenLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenLogic.swift; sourceTree = "<group>"; };
+		50435007297091A8002A4923 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50510A4327C621DF00239679 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		50AAA96F27D4902700037F34 /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
-		50AAA97127D49B3C00037F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		50D2547327C6398000E8E68A /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		50D2547527C642F900E8E68A /* AccountStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,8 +66,8 @@
 		5024F8A327C0FA3900E7CF39 /* SteamAuthenticator */ = {
 			isa = PBXGroup;
 			children = (
+				50435007297091A8002A4923 /* Info.plist */,
 				50AAA96F27D4902700037F34 /* FileReader.swift */,
-				50AAA97127D49B3C00037F34 /* Info.plist */,
 				5024F8B427C0FB6500E7CF39 /* models */,
 				5024F8A427C0FA3900E7CF39 /* SteamAuthenticatorApp.swift */,
 				5024F8A627C0FA3900E7CF39 /* ContentView.swift */,
@@ -157,6 +158,7 @@
 			files = (
 				5024F8AC27C0FA3A00E7CF39 /* Preview Assets.xcassets in Resources */,
 				5024F8A927C0FA3A00E7CF39 /* Assets.xcassets in Resources */,
+				50435008297091A8002A4923 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,13 +311,13 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SteamAuthenticator/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = net.djsmax.SteamAuthenticator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -336,13 +338,13 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SteamAuthenticator/Info.plist;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = net.djsmax.SteamAuthenticator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

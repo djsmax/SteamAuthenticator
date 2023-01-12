@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "1BE2B6E4-1920-4BBC-A689-F0D145C1B278"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8F5EA687-9AFC-4812-A625-D003F7008C3B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SteamAuthenticator/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "init()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8F5EA687-9AFC-4812-A625-D003F7008C3B - 1717f38b7e5a504b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SteamAuthenticator.ContentView.init() -&gt; SteamAuthenticator.ContentView"
+                  moduleName = "SteamAuthenticator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/IdeaProjects/SteamAuthenticator/SteamAuthenticator/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "1200">
+               </Location>
+               <Location
+                  uuid = "8F5EA687-9AFC-4812-A625-D003F7008C3B - 1717f38b7e5a504b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SteamAuthenticator.ContentView.init() -&gt; SteamAuthenticator.ContentView"
+                  moduleName = "SteamAuthenticator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/max/IdeaProjects/SteamAuthenticator/SteamAuthenticator/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "1652">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

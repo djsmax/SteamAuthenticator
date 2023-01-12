@@ -7,9 +7,9 @@
 
 import Foundation
 
-class AccountStorage {
+class AccountStorage: ObservableObject {
     let preferences = UserDefaults.standard
-    var accounts: [SteamUser] = []
+    @Published var accounts: [SteamUser] = []
     
     init() {
         load()
@@ -35,8 +35,18 @@ class AccountStorage {
         return self.accounts
     }
     
-    func add(user: SteamUser) {
+    func add(user: SteamUser) -> Bool {
+        if self.accounts.contains(where: {$0.accountName == user.accountName}) {
+            return false
+        }
         self.accounts.append(user)
+        objectWillChange.send()
+        self.save()
+        return true
+    }
+    
+    func remove(accountName: String) {
+        self.accounts.removeAll{$0.accountName == accountName}
         self.save()
     }
 }

@@ -14,6 +14,18 @@ func currTime() -> UInt32 {
     return UInt32(Date().timeIntervalSince1970)
 }
 
+func currTimeSeconds() -> Int {
+    // ugly but works (:<
+    return Calendar.current.component(.second, from: Date())
+}
+
+func timeOffset() -> Int {
+    // using local time should be fine
+    // it will skew a bit but it didn't matter while testing
+    let secs = currTimeSeconds()
+    return secs - (secs / 30) * 30
+}
+
 
 func generateGuardCode(sharedSecret: String) -> String {
     guard let secret = sharedSecret.fromBase64() else { return "" }
